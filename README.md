@@ -14,7 +14,7 @@ Basic usage:
 ```JS
 import { fromJS } from 'immutable';
 
-import { swaggerReducers } from 'swagger';
+import { swaggerReducers } from 'swagger-saga-client';
 
 const initialState = fromJS({});
 
@@ -26,7 +26,7 @@ export default (state = initialState, action) =>
 `saga.js `
 
 ```JS
-import { swaggerSaga, swaggerBatchSaga } from 'swagger';
+import { swaggerSaga, swaggerBatchSaga } from 'swagger-saga-client';
 import { all } from 'redux-saga/effects';
 export default function* rootSaga(payload) {
   yield all([
@@ -64,7 +64,7 @@ import {
   entityFetchBatchInitActionCreator,
   entityFetchInit,
   entityFetchInitActionCreator,
-} from 'swagger';
+} from 'swagger-saga-client';
 import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';
 import messages from './messages';
