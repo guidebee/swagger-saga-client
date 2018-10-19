@@ -1,0 +1,87 @@
+{
+  "name": "swagger-saga-client",
+  "version": "0.1.0",
+  "author": "James Shen <james.shen@guidebee.com>",
+  "description": "Swagger client use redux-saga",
+  "keywords": [
+    "react",
+    "swagger",
+    "redux",
+    "saga"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guidebee/swagger-saga-client"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "main": "dist/swagger-saga-client.cjs.js",
+  "module": "dist/swagger-saga-client.esm.js",
+  "sideEffects": false,
+  "scripts": {
+    "lint": "eslint ./src/",
+    "build": "rimraf dist && rollup -c",
+    "cover": "jest --coverage",
+    "test": "jest",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.4.2",
+    "codecov.io": "^0.1.6",
+    "enzyme": "^3.5.1",
+    "enzyme-adapter-react-16": "^1.4.0",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.5.0",
+    "prettier": "^1.14.2",
+    "prop-types": "^15.6.2",
+    "raf": "^3.3.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-test-renderer": "16.4.2",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.65.0",
+    "rollup-plugin-babel": "^4.0.3",
+    "swagger-client": "^3.8.21",
+    "redux-saga": "^0.15.3"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "^7.0.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "swagger-client": "^3.8.21",
+    "redux-saga": "^0.15.3"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "jest": {
+    "setupFiles": [
+      "raf/polyfill",
+      "./setupJest"
+    ],
+    "roots": [
+      "src"
+    ]
+  },
+  "dependencies": {
+    "hoist-non-react-statics": "^3.0.1",
+    "immutable": "^3.8.2"
+  }
+}
